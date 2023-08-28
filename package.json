@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "engines": {
-    "node": ">=14.20.1"
+    "node": ">=16.0.0"
   },
   "dependencies": {
     "@react-three/drei": "^9.80.8",
