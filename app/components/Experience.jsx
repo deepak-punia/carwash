@@ -7,7 +7,7 @@ import Section1 from "./Section1";
 
 
 const Experience = () => {
-   
+
     return (
         <>
 
@@ -20,10 +20,10 @@ const Experience = () => {
                     {/* DOM contents in here will scroll along */}
 
 
-                <Section1 />
-                    
+                    <Section1 />
 
-                    
+
+
                 </Scroll>
                 <Stage shadows="none" >
                     <Car rotation-y={-Math.PI / 2} position={[0, -150, 0]} />

@@ -4,16 +4,17 @@ import Image from 'next/image'
 import Experience from './components/Experience'
 import { AiOutlinePhone } from "react-icons/ai";
 import Plx from "react-plx";
-import { useEffect, useRef } from 'react';
+import { Suspense, useEffect, useRef } from 'react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 import { AiOutlineCar } from "react-icons/ai";
+import { Loader, Html, useProgress } from '@react-three/drei';
 
 export default function Home() {
 
-  
 
+  const { progress } = useProgress()
 
   return (
     <>
@@ -23,7 +24,7 @@ export default function Home() {
 
         <div className='text_container'>
           <nav>
-            <div class="nav_container">
+            <div className="nav_container">
               <div className='flex flex-1 items-center justify-between'>
                 <h1 className='logo '><AiOutlineCar /><span>Car Wash</span></h1>
                 <h1>
@@ -66,8 +67,11 @@ export default function Home() {
         </div>
         <div className='canvas_container'>
           <Canvas>
-            <Experience />
+            <Suspense fallback={<Html center><div className="custom-loader"></div></Html>}>
+              <Experience />
+            </Suspense>
           </Canvas>
+          {/* <Loader /> */}
         </div>
       </main>
     </>

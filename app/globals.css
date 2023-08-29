@@ -382,7 +382,7 @@ width: 100%;
   position: relative;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
 
   .text{
     font-size: 18px;
@@ -491,7 +491,7 @@ width: 100%;
       .feature3_left{
           
           
-          color: rgb(113 0 4);
+          color: #710004;
           display: flex;
           align-items: flex-end;
           justify-content: flex-end;
@@ -514,3 +514,13 @@ width: 100%;
 
       }
 }
+
+.custom-loader {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:conic-gradient(#0000 10%,#710004);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation:s3 1s infinite linear;
+}
+@keyframes s3 {to{transform: rotate(1turn)}}
